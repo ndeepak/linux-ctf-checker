@@ -1,0 +1,172 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 900px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #e8f5e8;
+  border-radius: 4px;
+  color: #2e7d32;
+}
+
+#challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 8px;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#challenge-grid button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+#challenge-grid button.solved {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#challenge-grid button.unsolved {
+  background-color: #f44336;
+  color: white;
+}
+
+#challenge-grid button.selected {
+  border: 3px solid #2196F3;
+  transform: scale(1.1);
+}
+
+.challenge-area {
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.challenge-area h2 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.challenge-area p {
+  margin: 0 0 20px 0;
+  color: #666;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#flagInput {
+  flex: 1;
+  max-width: 400px;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#flagInput:focus {
+  border-color: #2196F3;
+  outline: none;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0b7dda;
+}
+
+.message {
+  font-weight: bold;
+  font-size: 16px;
+  min-height: 24px;
+  margin: 10px 0;
+}
+
+.reset {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.reset:hover {
+  background-color: #d32f2f;
+}
+
+.developer-info {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.developer-info p {
+  margin: 5px 0;
+}
+
+.developer-info a {
+  color: #2196F3;
+  text-decoration: none;
+}
+
+.developer-info a:hover {
+  text-decoration: underline;
+}

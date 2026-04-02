@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Linux CTF – Flag Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🐧 Linux CTF Challenges</h1>
+
+    <div id="progress" class="progress-bar"></div>
+
+    <div id="challenge-grid">
+      <!-- Challenge buttons will be populated here -->
+    </div>
+
+    <div class="challenge-area">
+      <h2 id="challenge-title">Select a Challenge</h2>
+      <p id="challenge-description"></p>
+
+      <div class="input-section">
+        <input type="text" id="flagInput" placeholder="Enter flag here">
+        <button onclick="submitFlag()">Submit Flag</button>
+      </div>
+
+      <p id="message" class="message"></p>
+    </div>
+
+    <button onclick="resetProgress()" class="reset">Reset Progress</button>
+
+    <footer class="developer-info">
+      <p>Developed by <strong>Deepak Nagarkoti</strong></p>
+      <p>
+        <a href="https://twitter.com/ndeepak_" target="_blank">Twitter: @ndeepak_</a> |
+        <a href="https://www.linkedin.com/in/nagarkotideepak9" target="_blank">LinkedIn</a>
+      </p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+``
