@@ -26,7 +26,13 @@
         <button onclick="submitFlag()">Submit Flag</button>
       </div>
 
+      <div class="next-controls">
+        <label><input type="checkbox" id="autoAdvance" onchange="toggleAutoAdvance()"> Auto-advance on correct</label>
+        <button onclick="gotoNextChallenge()" id="nextBtn">Next Challenge</button>
+      </div>
+
       <p id="message" class="message"></p>
+      <p id="congrats" class="congrats hidden">🎉 Congratulations! All challenges solved! 🎉</p>
     </div>
 
     <button onclick="resetProgress()" class="reset">Reset Progress</button>

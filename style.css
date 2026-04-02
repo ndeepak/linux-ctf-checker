@@ -85,6 +85,36 @@ h1 {
   transform: scale(1.1);
 }
 
+.next-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.next-controls label {
+  font-size: 14px;
+  color: #333;
+}
+
+.congrats {
+  font-size: 20px;
+  color: #ff5ca3;
+  font-weight: 900;
+  margin-top: 12px;
+  animation: sparkle 1.6s ease-in-out infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes sparkle {
+  0%, 100% { text-shadow: 0 0 4px #ff5ca3, 0 0 24px #ffadff; }
+  50% { text-shadow: 0 0 8px #ff5ca3, 0 0 40px #ffd4ff; }
+}
+
 .challenge-area {
   text-align: center;
   border-top: 1px solid #ddd;
