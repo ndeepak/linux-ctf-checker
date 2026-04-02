@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Linux CTF - Instructions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    ol {
+      padding-left: 20px;
+    }
+    a {
+      color: #2196F3;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .developer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>🐧 Linux CTF Challenges</h1>
+
+  <p>A collection of 20 Linux command-line challenges designed to teach and test your Linux skills, from basic file permissions to advanced concepts like symbolic links, compression, and more.</p>
+
+  <h2>How to Play</h2>
+  <ol>
+    <li><strong>Run the Docker Container:</strong>
+      <pre><code>docker run -it ndeepak0x/linux-ctf:v0.1</code></pre>
+    </li>
+    <li><strong>Navigate to Challenges:</strong>
+      <p>Once inside the container, go to the challenges directory:</p>
+      <pre><code>cd /home/ctf/linux_ctf/challenges</code></pre>
+    </li>
+    <li><strong>Solve the Challenges:</strong>
+      <p>Each numbered directory (01_permissions, 02_dash_file, etc.) contains a challenge. Use Linux commands to find and read the flag files.</p>
+    </li>
+    <li><strong>Submit Flags:</strong>
+      <p>Open <code>index.html</code> in your browser and submit the flags you find. The format is <code>d33p{flag_content}</code>.</p>
+    </li>
+  </ol>
+
+  <h2>Challenge List</h2>
+  <ol>
+    <li><strong>Permission-based file</strong> - Understanding file permissions</li>
+    <li><strong>Dash-named file</strong> - Handling files starting with dash (-)</li>
+    <li><strong>Dash-named folder</strong> - Handling directories starting with dash</li>
+    <li><strong>Folder with trailing space</strong> - Working with spaces in names</li>
+    <li><strong>Folder with newline</strong> - Dealing with newlines in directory names</li>
+    <li><strong>Wildcard folder</strong> - Using wildcards (*)</li>
+    <li><strong>Execute-only folder</strong> - Navigating execute-only permissions</li>
+    <li><strong>Symlink trick</strong> - Following symbolic links</li>
+    <li><strong>Hidden file</strong> - Finding hidden files and directories</li>
+    <li><strong>Setuid permissions</strong> - Dealing with setuid</li>
+    <li><strong>Nested symlinks</strong> - Following link chains</li>
+    <li><strong>Compressed file</strong> - Extracting gzip files</li>
+    <li><strong>Timestamp manipulation</strong> - Finding files by date</li>
+    <li><strong>System directories</strong> - Locating files in /tmp</li>
+    <li><strong>Sticky bit</strong> - Understanding sticky permissions</li>
+    <li><strong>Hard links</strong> - Working with multiple file references</li>
+    <li><strong>Extended attributes</strong> - Files with metadata</li>
+    <li><strong>Sparse files</strong> - Efficient large files</li>
+    <li><strong>Named pipes</strong> - FIFO pipes</li>
+    <li><strong>Block device permissions</strong> - Device-like access</li>
+  </ol>
+
+  <div class="developer">
+    <h2>Development</h2>
+    <p>Built by <strong>Deepak Nagarkoti</strong></p>
+    <p>
+      <a href="https://twitter.com/ndeepak_" target="_blank">Twitter: @ndeepak_</a> |
+      <a href="https://www.linkedin.com/in/nagarkotideepak9" target="_blank">LinkedIn</a>
+    </p>
+  </div>
+</body>
+</html>
