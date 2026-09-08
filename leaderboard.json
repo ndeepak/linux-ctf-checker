@@ -1,1 +1,10 @@
-{}
+{
+  "yourname": {
+    "name": "yourname",
+    "github": "ndeepak",
+    "solved": 23,
+    "total": 23,
+    "completedAt": "2026-09-08T11:33:10Z",
+    "issue": "https://github.com/ndeepak/linux-ctf-checker/issues/1"
+  }
+}
