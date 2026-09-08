@@ -46,10 +46,18 @@ function normalizeParticipant(name) {
   return name.trim().toLowerCase();
 }
 
+async function getFlagHash(part, index) {
+  if (index === 13) {
+    const token = (await hashString(`${participant}:compressed`)).slice(0, 16);
+    return hashString(`d33p{compressed_${token}}`);
+  }
+  return hashString(`d33p{${part}_${participant}}`);
+}
+
 function loadParticipant(name) {
   participant = normalizeParticipant(name);
   localStorage.setItem("ctfParticipant", participant);
-  hashes = flagParts.map(part => hashString(`d33p{${part}_${participant}}`));
+  hashes = flagParts.map((part, index) => getFlagHash(part, index));
   solved = JSON.parse(localStorage.getItem(`ctfSolved:${participant}`)) || new Array(flagParts.length).fill(false);
   document.getElementById("signup").classList.add("hidden");
   document.getElementById("game").classList.remove("hidden");

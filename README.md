@@ -40,7 +40,7 @@ A collection of 20 Linux command-line challenges designed to teach and test your
 9. **Hidden file** - Finding hidden files and directories
 10. **Setuid permissions** - Dealing with setuid
 11. **Nested symlinks** - Following link chains
-12. **Compressed file** - Extracting gzip files
+12. **Compressed archive** - Inspecting a tar.gz file
 13. **Timestamp manipulation** - Finding files by date
 14. **System directories** - Locating files in /tmp
 15. **Sticky bit** - Understanding sticky permissions
