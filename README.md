@@ -4,22 +4,28 @@ A collection of 20 Linux command-line challenges designed to teach and test your
 
 ## How to Play
 
-1. **Run the Docker Container:**
+1. **Sign up on the checker page:**
+   Enter a participant name using 3–24 letters, numbers, underscores, or hyphens. The page stores your registration and progress in this browser.
+
+2. **Run the Docker Container with the same name:**
    ```bash
-   docker run -it ndeepak0x/linux-ctf:v0.1
+   docker run -it -e CTF_USERNAME=yourname ndeepak0x/linux-ctf:latest
    ```
 
-2. **Navigate to Challenges:**
+3. **Navigate to Challenges:**
    Once inside the container, go to the challenges directory:
    ```bash
    cd /home/ctf/linux_ctf/challenges
    ```
 
-3. **Solve the Challenges:**
+4. **Solve the Challenges:**
    Each numbered directory (01_permissions, 02_dash_file, etc.) contains a challenge. Use Linux commands to find and read the flag files.
 
-4. **Submit Flags:**
-   Open `index.html` in your browser and submit the flags you find. The format is `d33p{flag_content}`.
+5. **Submit Flags:**
+   Open the checker page in your browser and submit the flags you find. Each flag is personalized as `d33p{flag_content_yourname}`.
+
+6. **Check the Leaderboard:**
+   After all challenges are solved, the checker opens a prefilled GitHub completion Issue. Submit that Issue to trigger GitHub Actions. The workflow validates the completion format and updates the shared `leaderboard.json`.
 
 ## Challenge List
 

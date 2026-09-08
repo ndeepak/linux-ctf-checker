@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux CTF - Leaderboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container leaderboard-page">
+    <p class="instructions-link"><a href="index.html">&larr; Back to challenges</a></p>
+    <h1>🏆 CTF Leaderboard</h1>
+    <p class="leaderboard-note">Only participants who solved every challenge appear here. Fastest completion comes first.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Participant</th>
+            <th>Score</th>
+            <th>Completed</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboardBody"></tbody>
+      </table>
+      <p id="emptyLeaderboard" class="empty-leaderboard hidden">No participants have completed the CTF yet.</p>
+    </div>
+
+    <footer class="developer-info">
+      <p>Leaderboard data is synchronized from GitHub Actions.</p>
+    </footer>
+  </div>
+  <script src="leaderboard.js"></script>
+</body>
+</html>

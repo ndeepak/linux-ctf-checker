@@ -6,20 +6,40 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="container">
+
     <h1>🐧 Linux CTF Challenges</h1>
-    <p class="instructions-link"><a href="instructions.html" target="_blank">📖 How to Play Instructions</a></p>
+    <p class="instructions-link"><a href="instructions.html" target="_blank">📖 How to Play Instructions</a> <span>|</span> <a href="leaderboard.html">🏆 Leaderboard</a></p>
 
-    <div id="progress" class="progress-bar"></div>
+    <section id="signup" class="signup-card">
+      <h2>Join the CTF</h2>
+      <p>Choose a participant name. Your Docker flags will be personalized with this name.</p>
+      <form id="signupForm">
+        <label for="participantName">Participant name</label>
+        <div class="signup-input">
+          <input type="text" id="participantName" minlength="3" maxlength="24" pattern="[A-Za-z0-9_\-]+" autocomplete="off" required>
+          <button type="submit">Start CTF</button>
+        </div>
+        <small>Use 3–24 letters, numbers, underscores, or hyphens.</small>
+      </form>
+      <p id="signupMessage" class="message"></p>
+    </section>
 
-    <div id="challenge-grid">
-      <!-- Challenge buttons will be populated here -->
-    </div>
+    <div id="game" class="hidden">
+      <div class="participant-bar">
+        <span>Participant: <strong id="participantLabel"></strong></span>
+        <button onclick="changeParticipant()" class="secondary">Change name</button>
+      </div>
 
-    <div class="challenge-area">
-      <h2 id="challenge-title">Select a Challenge</h2>
-      <p id="challenge-description"></p>
+      <div id="progress" class="progress-bar"></div>
+
+      <div id="challenge-grid">
+        <!-- Challenge buttons will be populated here -->
+      </div>
+
+      <div class="challenge-area">
+        <h2 id="challenge-title">Select a Challenge</h2>
+        <p id="challenge-description"></p>
 
       <div class="input-section">
         <input type="text" id="flagInput" placeholder="Enter flag here">
@@ -32,10 +52,11 @@
       </div>
 
       <p id="message" class="message"></p>
-      <p id="congrats" class="congrats hidden">🎉 Congratulations! All challenges solved! 🎉</p>
-    </div>
+        <p id="congrats" class="congrats hidden">🎉 Congratulations! All challenges solved! <a href="leaderboard.html">View leaderboard</a></p>
+      </div>
 
-    <button onclick="resetProgress()" class="reset">Reset Progress</button>
+      <button onclick="resetProgress()" class="reset">Reset Progress</button>
+    </div>
 
     <footer class="developer-info">
       <p>Developed by <strong>Deepak Nagarkoti</strong></p>
@@ -49,4 +70,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-``

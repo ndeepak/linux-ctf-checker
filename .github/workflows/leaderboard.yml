@@ -1,0 +1,37 @@
+name: Update CTF leaderboard
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  update-leaderboard:
+    if: startsWith(github.event.issue.title, '[CTF Completion] ')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Update leaderboard JSON
+        env:
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+        run: python .github/scripts/update_leaderboard.py
+
+      - name: Commit leaderboard
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add leaderboard.json
+          git diff --cached --quiet || git commit -m "Update CTF leaderboard"
+          git push
+
+      - name: Close completion issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue close "${{ github.event.issue.number }}" \
+            --comment "Completion recorded in the leaderboard."

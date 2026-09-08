@@ -50,9 +50,13 @@
   <p>A collection of 20 Linux command-line challenges designed to teach and test your Linux skills, from basic file permissions to advanced concepts like symbolic links, compression, and more.</p>
 
   <h2>How to Play</h2>
+  <p><a href="leaderboard.html">View the leaderboard</a> to compare progress with other participants using this browser.</p>
   <ol>
+    <li><strong>Sign up:</strong>
+      <p>Enter a participant name on the checker page. Use the same name when starting Docker.</p>
+    </li>
     <li><strong>Run the Docker Container:</strong>
-      <pre><code>docker run -it ndeepak0x/linux-ctf:latest</code></pre>
+      <pre><code>docker run -it -e CTF_USERNAME=yourname ndeepak0x/linux-ctf:latest</code></pre>
     </li>
     <li><strong>Navigate to Challenges:</strong>
       <p>Once inside the container, go to the challenges directory:</p>
@@ -62,7 +66,10 @@
       <p>Each numbered directory (01_permissions, 02_dash_file, etc.) contains a challenge. Use Linux commands to find and read the flag files.</p>
     </li>
     <li><strong>Submit Flags:</strong>
-      <p>Open <code>index.html</code> in your browser and submit the flags you find. The format is <code>d33p{flag_content}</code>.</p>
+      <p>Open the checker page in your browser and submit the flags you find. Flags are personalized in the format <code>d33p{flag_content_yourname}</code>.</p>
+    </li>
+    <li><strong>Publish your completion:</strong>
+      <p>After the final challenge, the checker opens a prefilled GitHub Issue. Submit it so GitHub Actions can add your result to the shared leaderboard.</p>
     </li>
   </ol>
 
